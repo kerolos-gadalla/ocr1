@@ -19,9 +19,11 @@
   },
   "scripts": {
     "start2": "react-scripts start",
+    "startw": "yarn asc  assembly/index.ts -b public/my-wasm.wasm --transform as-bind --optimize --exportRuntime",
     "start": "yarn craco start",
+
     "build2": "react-scripts build",
-    "build:wasm": "asc ./node_modules/as-bind/lib/assembly/as-bind.ts assembly/index.ts -b public/my-wasm.wasm --optimize",
+    "build:wasm": "asc  assembly/index.ts -b public/my-wasm.wasm --transform as-bind --optimize",
     "build": "yarn build:wasm && yarn build:react",
     "build:react": "yarn craco build",
     "test2": "react-scripts test",
